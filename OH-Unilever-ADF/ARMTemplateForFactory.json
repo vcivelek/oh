@@ -249,6 +249,8 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
+						"fileName": "@file",
+						"folderPath": "@directory",
 						"fileSystem": "raw"
 					}
 				},
