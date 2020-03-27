@@ -56,10 +56,9 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"directory": {
-											"value": "cloudsales",
+											"value": "@item().destination.directory",
 											"type": "Expression"
-										},
-										"file": "@item().destination.file"
+										}
 									}
 								}
 							]
@@ -77,8 +76,8 @@
 							"tableName": "Addresses"
 						},
 						"destination": {
-							"directory": "raw/cloudsales",
-							"file": "dbo.Addresses.parquet"
+							"directory": "cloudsales",
+							"file": "dbo.Addresdsadasses.parquet"
 						}
 					},
 					{
@@ -86,7 +85,7 @@
 							"tableName": "Customers"
 						},
 						"destination": {
-							"directory": "raw/cloudsales",
+							"directory": "cloudsales",
 							"file": "dbo.Customers.parquet"
 						}
 					},
@@ -95,7 +94,7 @@
 							"tableName": "OrderDetails"
 						},
 						"destination": {
-							"directory": "raw/cloudsales",
+							"directory": "cloudsales",
 							"file": "dbo.OrderDetails.parquet"
 						}
 					},
@@ -104,7 +103,7 @@
 							"tableName": "Orders"
 						},
 						"destination": {
-							"directory": "raw/cloudsales",
+							"directory": "cloudsales",
 							"file": "dbo.Orders.parquet"
 						}
 					}
