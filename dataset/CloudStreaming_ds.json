@@ -3,10 +3,7 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "CloudStreaming_ls",
-			"type": "LinkedServiceReference",
-			"parameters": {
-				"tablename": "das"
-			}
+			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
