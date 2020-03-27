@@ -1,8 +1,8 @@
 {
-	"name": "ADLS_json_ds",
+	"name": "ADLS_parq_ds",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ADLS__ls",
+			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -14,12 +14,14 @@
 			}
 		},
 		"annotations": [],
-		"type": "Json",
+		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileSystem": "raw"
-			}
-		}
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
 	}
 }
