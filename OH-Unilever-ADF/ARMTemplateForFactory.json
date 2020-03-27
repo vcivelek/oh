@@ -220,49 +220,6 @@
 						]
 					}
 				],
-				"parameters": {
-					"items": {
-						"type": "string",
-						"defaultValue": [
-							{
-								"source": {
-									"tableName": "[[dbo].[Addresses]"
-								},
-								"destination": {
-									"directory": "southridge/cloudsales",
-									"file": "dbo.Addresses.parquet"
-								}
-							},
-							{
-								"source": {
-									"tableName": "[[dbo].[Customers]"
-								},
-								"destination": {
-									"directory": "southridge/cloudsales",
-									"file": "dbo.Customers.parquet"
-								}
-							},
-							{
-								"source": {
-									"tableName": "[[dbo].[OrderDetails]"
-								},
-								"destination": {
-									"directory": "southridge/cloudsales",
-									"file": "dbo.OrderDetails.parquet"
-								}
-							},
-							{
-								"source": {
-									"tableName": "[[dbo].[Orders]"
-								},
-								"destination": {
-									"directory": "southridge/cloudsales",
-									"file": "dbo.Orders.parquet"
-								}
-							}
-						]
-					}
-				},
 				"annotations": []
 			},
 			"dependsOn": [
