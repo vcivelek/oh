@@ -39,11 +39,11 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ADLS_ds",
+						"referenceName": "ADLS_json_ds",
 						"type": "DatasetReference",
 						"parameters": {
-							"directory": "movie_catalog",
-							"file": "movies.json"
+							"directory": "catalog",
+							"file": "movie.json"
 						}
 					}
 				]
