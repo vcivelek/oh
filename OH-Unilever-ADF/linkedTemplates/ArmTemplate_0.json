@@ -162,8 +162,8 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "@dataset.file()",
-						"folderPath": "@dataset.directory()",
+						"fileName": "@dataset().file",
+						"folderPath": "@dataset().directory",
 						"fileSystem": "raw"
 					}
 				},
@@ -217,8 +217,7 @@
 				},
 				"parameters": {
 					"tablename": {
-						"type": "string",
-						"defaultValue": "@item().source.tableName"
+						"type": "string"
 					}
 				},
 				"annotations": [],
