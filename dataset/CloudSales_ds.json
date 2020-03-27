@@ -14,11 +14,11 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": {
-				"value": "@dataset",
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().tablename",
 				"type": "Expression"
-			},
-			"table": "tablename"
+			}
 		}
 	}
 }
