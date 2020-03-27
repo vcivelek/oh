@@ -3,10 +3,7 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabase_ls",
-			"type": "LinkedServiceReference",
-			"parameters": {
-				"tablename": "@dataset.tablename"
-			}
+			"type": "LinkedServiceReference"
 		},
 		"parameters": {
 			"tablename": {
@@ -16,6 +13,10 @@
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"schema": "@dataset",
+			"table": "tablename"
+		}
 	}
 }
