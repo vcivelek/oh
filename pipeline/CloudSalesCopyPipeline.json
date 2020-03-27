@@ -58,7 +58,8 @@
 										"directory": {
 											"value": "@item().destination.directory",
 											"type": "Expression"
-										}
+										},
+										"file": "@item().destination.file"
 									}
 								}
 							]
