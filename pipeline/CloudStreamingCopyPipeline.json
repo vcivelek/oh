@@ -1,0 +1,107 @@
+{
+	"name": "CloudStreamingCopyPipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.items",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Copy_CloudSales",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "AzureSqlSource",
+									"queryTimeout": "02:00:00"
+								},
+								"sink": {
+									"type": "ParquetSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									}
+								},
+								"enableStaging": false
+							},
+							"inputs": [
+								{
+									"referenceName": "CloudSales_ds",
+									"type": "DatasetReference",
+									"parameters": {
+										"tablename": {
+											"value": "@item().source.tableName",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ADLS_parq_ds",
+									"type": "DatasetReference",
+									"parameters": {
+										"directory": {
+											"value": "@item().destination.directory",
+											"type": "Expression"
+										},
+										"file": "@item().destination.file"
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"items": {
+				"type": "array",
+				"defaultValue": [
+					{
+						"source": {
+							"tableName": "Addresses"
+						},
+						"destination": {
+							"directory": "cloudstreaming",
+							"file": "dbo.Addresses.parquet"
+						}
+					},
+					{
+						"source": {
+							"tableName": "Customers"
+						},
+						"destination": {
+							"directory": "cloudstreaming",
+							"file": "dbo.Customers.parquet"
+						}
+					},
+					{
+						"source": {
+							"tableName": "Transactions"
+						},
+						"destination": {
+							"directory": "cloudstreaming",
+							"file": "dbo.Transactions.parquet"
+						}
+					}
+				]
+			}
+		},
+		"annotations": []
+	}
+}
