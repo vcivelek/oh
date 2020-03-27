@@ -1,0 +1,21 @@
+{
+	"name": "CloudSales_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_ls",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"tablename": "@dataset.tablename"
+			}
+		},
+		"parameters": {
+			"tablename": {
+				"type": "string",
+				"defaultValue": "@item().source.tableName"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}

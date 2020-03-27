@@ -1,0 +1,120 @@
+{
+	"name": "CloudSalesCopyPipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.items",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Copy_CloudSales",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "AzureSqlSource",
+									"queryTimeout": "02:00:00"
+								},
+								"sink": {
+									"type": "JsonSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "JsonWriteSettings",
+										"quoteAllText": true
+									}
+								},
+								"enableStaging": false
+							},
+							"inputs": [
+								{
+									"referenceName": "CloudSales_ds",
+									"type": "DatasetReference",
+									"parameters": {
+										"tablename": {
+											"value": "@item().source.tableName",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ADLS_ds",
+									"type": "DatasetReference",
+									"parameters": {
+										"directory": {
+											"value": "@item().destination.directory",
+											"type": "Expression"
+										},
+										"file": "@item().destination.file"
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"items": {
+				"type": "string",
+				"defaultValue": [
+					{
+						"source": {
+							"tableName": "[dbo].[Addresses]"
+						},
+						"destination": {
+							"directory": "southridge/cloudsales",
+							"file": "dbo.Addresses.parquet"
+						}
+					},
+					{
+						"source": {
+							"tableName": "[dbo].[Customers]"
+						},
+						"destination": {
+							"directory": "southridge/cloudsales",
+							"file": "dbo.Customers.parquet"
+						}
+					},
+					{
+						"source": {
+							"tableName": "[dbo].[OrderDetails]"
+						},
+						"destination": {
+							"directory": "southridge/cloudsales",
+							"file": "dbo.OrderDetails.parquet"
+						}
+					},
+					{
+						"source": {
+							"tableName": "[dbo].[Orders]"
+						},
+						"destination": {
+							"directory": "southridge/cloudsales",
+							"file": "dbo.Orders.parquet"
+						}
+					}
+				]
+			}
+		},
+		"annotations": []
+	}
+}
