@@ -122,37 +122,37 @@
 						"defaultValue": [
 							{
 								"source": {
-									"tableName": "[[dbo].[Addresses]"
+									"tableName": "Addresses"
 								},
 								"destination": {
-									"directory": "southridge/cloudsales",
-									"file": "dbo.Addresses.parquet"
+									"directory": "cloudsales",
+									"file": "dbo.Addresdsadasses.parquet"
 								}
 							},
 							{
 								"source": {
-									"tableName": "[[dbo].[Customers]"
+									"tableName": "Customers"
 								},
 								"destination": {
-									"directory": "southridge/cloudsales",
+									"directory": "cloudsales",
 									"file": "dbo.Customers.parquet"
 								}
 							},
 							{
 								"source": {
-									"tableName": "[[dbo].[OrderDetails]"
+									"tableName": "OrderDetails"
 								},
 								"destination": {
-									"directory": "southridge/cloudsales",
+									"directory": "cloudsales",
 									"file": "dbo.OrderDetails.parquet"
 								}
 							},
 							{
 								"source": {
-									"tableName": "[[dbo].[Orders]"
+									"tableName": "Orders"
 								},
 								"destination": {
-									"directory": "southridge/cloudsales",
+									"directory": "cloudsales",
 									"file": "dbo.Orders.parquet"
 								}
 							}
@@ -282,6 +282,14 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
+						"fileName": {
+							"value": "@dataset().file",
+							"type": "Expression"
+						},
+						"folderPath": {
+							"value": "@dataset().directory",
+							"type": "Expression"
+						},
 						"fileSystem": "raw"
 					},
 					"compressionCodec": "snappy"
@@ -311,11 +319,11 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": {
-						"value": "@dataset",
+					"schema": "dbo",
+					"table": {
+						"value": "@dataset().tablename",
 						"type": "Expression"
-					},
-					"table": "tablename"
+					}
 				}
 			},
 			"dependsOn": [
@@ -443,7 +451,8 @@
 			"properties": {
 				"parameters": {
 					"tablename": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "dbo.Addresses"
 					}
 				},
 				"annotations": [],
