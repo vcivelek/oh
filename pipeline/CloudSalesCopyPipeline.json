@@ -74,29 +74,11 @@
 				"defaultValue": [
 					{
 						"source": {
-							"tableName": "Addresses"
+							"tableName": "Foobar"
 						},
 						"destination": {
 							"directory": "cloudsales",
 							"file": "dbo.Addresdsadasses.parquet"
-						}
-					},
-					{
-						"source": {
-							"tableName": "Customers"
-						},
-						"destination": {
-							"directory": "cloudsales",
-							"file": "dbo.Customers.parquet"
-						}
-					},
-					{
-						"source": {
-							"tableName": "OrderDetails"
-						},
-						"destination": {
-							"directory": "cloudsales",
-							"file": "dbo.OrderDetails.parquet"
 						}
 					}
 				]
