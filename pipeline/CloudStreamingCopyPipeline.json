@@ -14,7 +14,7 @@
 					},
 					"activities": [
 						{
-							"name": "Copy_CloudSales",
+							"name": "Copy_CloudStreaming",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -40,14 +40,8 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "CloudSales_ds",
-									"type": "DatasetReference",
-									"parameters": {
-										"tablename": {
-											"value": "@item().source.tableName",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "CloudStreaming_ds",
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
