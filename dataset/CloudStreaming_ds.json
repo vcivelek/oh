@@ -3,13 +3,14 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "CloudStreaming_ls",
-			"type": "LinkedServiceReference",
-			"parameters": {
-				"tablename": "@dataset.tablename"
-			}
+			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "@dataset.tablename"
+		}
 	}
 }
