@@ -71,44 +71,7 @@
 		"parameters": {
 			"items": {
 				"type": "array",
-				"defaultValue": [
-					{
-						"source": {
-							"tableName": "Addresses"
-						},
-						"destination": {
-							"directory": "cloudsales",
-							"file": "dbo.Addresdsadasses.parquet"
-						}
-					},
-					{
-						"source": {
-							"tableName": "Customers"
-						},
-						"destination": {
-							"directory": "cloudsales",
-							"file": "dbo.Customers.parquet"
-						}
-					},
-					{
-						"source": {
-							"tableName": "OrderDetails"
-						},
-						"destination": {
-							"directory": "cloudsales",
-							"file": "dbo.OrderDetails.parquet"
-						}
-					},
-					{
-						"source": {
-							"tableName": "Orders"
-						},
-						"destination": {
-							"directory": "cloudsales",
-							"file": "dbo.Orders.parquet"
-						}
-					}
-				]
+				"defaultValue": []
 			}
 		},
 		"annotations": []
