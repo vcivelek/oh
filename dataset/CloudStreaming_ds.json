@@ -1,0 +1,15 @@
+{
+	"name": "CloudStreaming_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CloudStreaming_ls",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"tablename": "@dataset.tablename"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
