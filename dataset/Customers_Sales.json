@@ -1,5 +1,5 @@
 {
-	"name": "Customers",
+	"name": "Customers_Sales",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ADLS__ls",
