@@ -11,6 +11,18 @@
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase3_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase4_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabase_ls_connectionString": {
 			"value": ""
 		},
@@ -20,7 +32,19 @@
 		"CosmosDb1_connectionString": {
 			"value": ""
 		},
+		"CosmosDb2_connectionString": {
+			"value": ""
+		},
+		"CosmosDb3_connectionString": {
+			"value": ""
+		},
 		"CosmosDb_ls_connectionString": {
+			"value": ""
+		},
+		"FourthCoffee_ls_password": {
+			"value": ""
+		},
+		"SqlServer1_connectionString": {
 			"value": ""
 		},
 		"ADLS__ls_properties_typeProperties_url": {
@@ -28,6 +52,12 @@
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://ohunileverdatalake.dfs.core.windows.net"
+		},
+		"FourthCoffee_ls_properties_typeProperties_host": {
+			"value": "c:\\"
+		},
+		"FourthCoffee_ls_properties_typeProperties_userId": {
+			"value": "openhackadmin"
 		}
 	}
 }
