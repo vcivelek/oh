@@ -20,33 +20,37 @@
 						"storeSettings": {
 							"type": "FileServerReadSettings",
 							"recursive": true,
-							"wildcardFileName": "*"
+							"wildcardFolderPath": "Rentals",
+							"wildcardFileName": "*",
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
-						"type": "ParquetSink",
+						"type": "DelimitedTextSink",
 						"storeSettings": {
 							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
 						}
 					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "FourthCoffee_ds",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "ADLS_FourthCoffee_ds",
-						"type": "DatasetReference",
-						"parameters": {
-							"directory": "fourthcoffee"
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}
