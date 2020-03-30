@@ -7,12 +7,15 @@
 		},
 		"parameters": {
 			"tablename": {
-				"type": "string",
-				"defaultValue": "@item().source.tableName"
+				"type": "string"
 			}
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Addresses"
+		}
 	}
 }
