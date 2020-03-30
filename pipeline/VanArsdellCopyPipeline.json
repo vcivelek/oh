@@ -41,7 +41,13 @@
 							"inputs": [
 								{
 									"referenceName": "VanArsdell_ds",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"tablename": {
+											"value": "@item().source.tableName",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
