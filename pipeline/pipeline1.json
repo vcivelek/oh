@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "FourthCoffeeCopyPipeline",
+				"name": "FourthCoffeeCopy",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
