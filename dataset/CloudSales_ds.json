@@ -2,23 +2,20 @@
 	"name": "CloudSales_ds",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabase_ls",
-			"type": "LinkedServiceReference"
+			"referenceName": "AzureSqlDatabase4",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"tablename": "@dataset.tablename"
+			}
 		},
 		"parameters": {
 			"tablename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "@item().source.tableName"
 			}
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": [],
-		"typeProperties": {
-			"schema": "dbo",
-			"table": {
-				"value": "@dataset().tablename",
-				"type": "Expression"
-			}
-		}
+		"schema": []
 	}
 }
