@@ -3,19 +3,19 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabase4",
-			"type": "LinkedServiceReference",
-			"parameters": {
-				"tablename": "dbo.Addresses"
-			}
+			"type": "LinkedServiceReference"
 		},
 		"parameters": {
 			"tablename": {
-				"type": "string",
-				"defaultValue": "@item().source.tableName"
+				"type": "string"
 			}
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Addresses"
+		}
 	}
 }
