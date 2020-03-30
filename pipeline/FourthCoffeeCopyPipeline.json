@@ -45,8 +45,7 @@
 						"referenceName": "ADLS_FourthCoffee_ds",
 						"type": "DatasetReference",
 						"parameters": {
-							"directory": "fourthcoffee",
-							"file": "@dataset().file"
+							"directory": "fourthcoffee"
 						}
 					}
 				]
