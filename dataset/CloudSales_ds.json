@@ -5,7 +5,7 @@
 			"referenceName": "AzureSqlDatabase4",
 			"type": "LinkedServiceReference",
 			"parameters": {
-				"tablename": "@dataset.tablename"
+				"tablename": "dbo.Addresses"
 			}
 		},
 		"parameters": {
