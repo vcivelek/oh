@@ -1,5 +1,5 @@
 {
-	"name": "CloudStreaming",
+	"name": "Customers_Streaming",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ADLS__ls",
@@ -13,6 +13,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "dbo.Customers.parquet",
 				"folderPath": "cloudstreaming",
 				"fileSystem": "raw"
 			},
