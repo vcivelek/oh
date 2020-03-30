@@ -1,0 +1,20 @@
+{
+	"name": "FourthCoffee_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FourthCoffee_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
