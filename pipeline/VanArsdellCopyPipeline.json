@@ -31,9 +31,13 @@
 									"queryTimeout": "02:00:00"
 								},
 								"sink": {
-									"type": "ParquetSink",
+									"type": "JsonSink",
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "JsonWriteSettings",
+										"quoteAllText": true
 									}
 								},
 								"enableStaging": false
@@ -52,14 +56,11 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ADLS_parq_ds",
+									"referenceName": "ADLS_json_ds",
 									"type": "DatasetReference",
 									"parameters": {
-										"directory": {
-											"value": "@item().destination.directory",
-											"type": "Expression"
-										},
-										"file": "@item().destination.file"
+										"directory": "@item().source.directory",
+										"file": "@item().source.file"
 									}
 								}
 							]
