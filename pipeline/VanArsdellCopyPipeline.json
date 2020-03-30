@@ -59,8 +59,8 @@
 									"referenceName": "ADLS_json_ds",
 									"type": "DatasetReference",
 									"parameters": {
-										"directory": "@item().source.directory",
-										"file": "@item().source.file"
+										"directory": "@item().destination.directory",
+										"file": "@item().destination.file"
 									}
 								}
 							]
