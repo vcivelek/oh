@@ -5,11 +5,14 @@
 			"referenceName": "CloudStreaming_ls",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"tablename": {
+				"type": "string",
+				"defaultValue": "@item().source.tableName"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": [],
-		"typeProperties": {
-			"schema": "dbo"
-		}
+		"schema": []
 	}
 }
