@@ -41,10 +41,7 @@
 							"inputs": [
 								{
 									"referenceName": "CloudStreaming_ds",
-									"type": "DatasetReference",
-									"parameters": {
-										"tablename": "@item().source.tableName"
-									}
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
