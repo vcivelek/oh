@@ -7,10 +7,12 @@
 		},
 		"parameters": {
 			"directory": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "catalog"
 			},
 			"file": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "movie.json"
 			}
 		},
 		"annotations": [],
