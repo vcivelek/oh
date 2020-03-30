@@ -79,7 +79,7 @@
 						},
 						"destination": {
 							"directory": "vanarsdell",
-							"file": "dbo.Actors.parquet"
+							"file": "dbo.Actors.json"
 						}
 					},
 					{
@@ -88,7 +88,7 @@
 						},
 						"destination": {
 							"directory": "vanarsdell",
-							"file": "dbo.Customers.parquet"
+							"file": "dbo.Customers.json"
 						}
 					},
 					{
@@ -97,7 +97,7 @@
 						},
 						"destination": {
 							"directory": "vanarsdell",
-							"file": "dbo.MovieActors.parquet"
+							"file": "dbo.MovieActors.json"
 						}
 					},
 					{
@@ -106,7 +106,7 @@
 						},
 						"destination": {
 							"directory": "vanarsdell",
-							"file": "dbo.Movies.parquet"
+							"file": "dbo.Movies.json"
 						}
 					},
 					{
@@ -115,7 +115,7 @@
 						},
 						"destination": {
 							"directory": "vanarsdell",
-							"file": "dbo.OnlineMovieMappings.parquet"
+							"file": "dbo.OnlineMovieMappings.json"
 						}
 					},
 					{
@@ -124,7 +124,7 @@
 						},
 						"destination": {
 							"directory": "vanarsdell",
-							"file": "dbo.Transactions.parquet"
+							"file": "dbo.Transactions.json"
 						}
 					}
 				]
