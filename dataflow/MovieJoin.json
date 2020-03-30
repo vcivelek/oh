@@ -1,38 +1,12 @@
 {
-	"name": "dataflow1",
+	"name": "MovieJoin",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
-			"sources": [
-				{
-					"dataset": {
-						"referenceName": "ADLS_FourthCoffee_ds",
-						"type": "DatasetReference"
-					},
-					"name": "FourthCoffee"
-				},
-				{
-					"dataset": {
-						"referenceName": "ADLS_json_ds",
-						"type": "DatasetReference"
-					},
-					"name": "CosmosDB"
-				},
-				{
-					"dataset": {
-						"referenceName": "ADLS_parq_ds",
-						"type": "DatasetReference"
-					},
-					"name": "source1"
-				}
-			],
+			"sources": [],
 			"sinks": [],
-			"transformations": [
-				{
-					"name": "Join1"
-				}
-			],
-			"script": "source(output(\n\t\t{_col0_} as string,\n\t\t{_col1_} as string,\n\t\t{_col2_} as string,\n\t\t{_col3_} as string,\n\t\t{_col4_} as string,\n\t\t{_col5_} as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\twildcardPaths:['fourthcoffee/Movies.csv']) ~> FourthCoffee\nsource(output(\n\t\t{_attachments} as string,\n\t\t{_etag} as string,\n\t\t{_rid} as string,\n\t\t{_self} as string,\n\t\t{_ts} as integer,\n\t\tactors as (name as string)[],\n\t\tavailabilityDate as timestamp,\n\t\tgenre as string,\n\t\tid as string,\n\t\trating as string,\n\t\treleaseYear as short,\n\t\truntime as short,\n\t\tstreamingAvailabilityDate as timestamp,\n\t\ttier as short,\n\t\ttitle as string\n\t),\n\tallowSchemaDrift: false,\n\tvalidateSchema: false,\n\tlimit: 100,\n\tpartitionBy('roundRobin', 2)) ~> CosmosDB\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet') ~> source1\nFourthCoffee, CosmosDB join({_col0_} == id,\n\tjoinType:'inner',\n\tbroadcast: 'none')~> Join1"
+			"transformations": [],
+			"script": ""
 		}
 	}
 }
