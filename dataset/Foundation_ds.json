@@ -1,5 +1,5 @@
 {
-	"name": "Parquet1",
+	"name": "Foundation_ds",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ADLS__ls",
