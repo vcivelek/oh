@@ -1,5 +1,5 @@
 {
-	"name": "CosmosDBCatalog",
+	"name": "MoviesCosmosDB",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ADLS__ls",
@@ -13,6 +13,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "movie.json",
 				"folderPath": "catalog",
 				"fileSystem": "raw"
 			}

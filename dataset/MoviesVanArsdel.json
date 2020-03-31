@@ -1,5 +1,5 @@
 {
-	"name": "VanArsdel",
+	"name": "MoviesVanArsdel",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ADLS__ls",
@@ -13,6 +13,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "dbo.Movies.json",
 				"folderPath": "vanarsdell",
 				"fileSystem": "raw"
 			}
