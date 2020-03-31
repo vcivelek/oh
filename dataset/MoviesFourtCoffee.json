@@ -1,5 +1,5 @@
 {
-	"name": "FourtCoffee",
+	"name": "MoviesFourtCoffee",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ADLS__ls",
@@ -13,6 +13,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "Movies.csv",
 				"folderPath": "fourthcoffee",
 				"fileSystem": "raw"
 			},
