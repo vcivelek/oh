@@ -25,10 +25,6 @@
 				"name": "Gender",
 				"type": "char"
 			}
-		],
-		"typeProperties": {
-			"schema": "dbo",
-			"table": "Actors"
-		}
+		]
 	}
 }
