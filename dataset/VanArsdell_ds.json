@@ -25,6 +25,13 @@
 				"name": "Gender",
 				"type": "char"
 			}
-		]
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "dataset().tablename",
+				"type": "Expression"
+			}
+		}
 	}
 }
