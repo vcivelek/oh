@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_qrl",
+				"name": "Copy_qrl_copy1",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
